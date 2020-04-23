@@ -13,6 +13,7 @@ env:
 script:
   - arch
   - df -H
+  - quota -A
   
 install:
   - docker pull linuxppc/build:$IMAGE-$(uname -m)
