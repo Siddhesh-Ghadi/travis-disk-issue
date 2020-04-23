@@ -1,14 +1,14 @@
-#language: c
+language: c
 dist: xenial
 arch: ppc64le
-#cache: ccache
-#services:
+cache: ccache
+services:
   - docker
 
-#env:
-#  global:
-#    - ARCH=powerpc
-#    - IMAGE=ubuntu-19.10
+env:
+  global:
+    - ARCH=powerpc
+    - IMAGE=ubuntu-19.10
     
 #install:
 #  - docker pull linuxppc/build:$IMAGE-$(uname -m)
