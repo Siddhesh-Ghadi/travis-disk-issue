@@ -15,8 +15,8 @@ env:
 script:
   - arch
   - df -H
-  - quota -A
   - cat /etc/fstab
+  - df -i
   
 install:
   - docker pull linuxppc/build:$IMAGE-$(uname -m)
