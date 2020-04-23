@@ -3,7 +3,7 @@ dist: xenial
 arch: ppc64le
 #cache: ccache
 #services:
-  - docker
+#  - docker
 
 #env:
 #  global:
