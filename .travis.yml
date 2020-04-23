@@ -4,9 +4,9 @@ arch: ppc64le
 cache: ccache
 services:
   - docker
-addon:
-  apt:
-    - quota
+#addon:
+#  apt:
+#    - quota
 env:
   global:
     - ARCH=powerpc
@@ -16,6 +16,7 @@ script:
   - arch
   - df -H
   - quota -A
+  - cat /etc/fstab
   
 install:
   - docker pull linuxppc/build:$IMAGE-$(uname -m)
