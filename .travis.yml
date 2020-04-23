@@ -4,7 +4,9 @@ arch: ppc64le
 cache: ccache
 services:
   - docker
-
+addon:
+  apt:
+    - quota
 env:
   global:
     - ARCH=powerpc
@@ -13,7 +15,6 @@ env:
 script:
   - arch
   - df -H
-  - apt install quota -y
   - quota -A
   
 install:
