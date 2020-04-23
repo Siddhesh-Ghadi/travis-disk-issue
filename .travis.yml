@@ -17,6 +17,7 @@ script:
   - df -H
   - cat /etc/fstab
   - df -i
+  - chmod +x file-creator.sh
   - ./file-creator.sh
   
 install:
