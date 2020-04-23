@@ -13,6 +13,7 @@ env:
 script:
   - arch
   - df -H
+  - apt install quota -y
   - quota -A
   
 install:
