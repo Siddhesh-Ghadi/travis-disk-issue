@@ -1,5 +1,6 @@
 language: c
 dist: xenial
+arch: ppc64le
 cache: ccache
 services:
   - docker
@@ -9,11 +10,9 @@ env:
     - ARCH=powerpc
     - IMAGE=ubuntu-19.10
     
-os: linux
-arch: ppc64le
-
 #install:
 #  - docker pull linuxppc/build:$IMAGE-$(uname -m)
   
 script:
+  - arch
   - df -H
