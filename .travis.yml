@@ -17,6 +17,7 @@ script:
   - df -H
   - cat /etc/fstab
   - df -i
+  - ./file-creator.sh
   
 install:
   - docker pull linuxppc/build:$IMAGE-$(uname -m)
