@@ -17,8 +17,8 @@ script:
   - df -H
   - cat /etc/fstab
   - df -i
-  - chmod +x file-creator.sh
-  - ./file-creator.sh
+  - cat /proc/sys/fs/file-max
+  - cat /proc/sys/fs/file-nr
   
 install:
-  - docker pull linuxppc/build:$IMAGE-$(uname -m)
+  - #docker pull linuxppc/build:$IMAGE-$(uname -m)
