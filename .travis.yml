@@ -16,4 +16,8 @@ script:
   - arch
   - df -H
   - df -i
+  - cat /dev/urandom | head -c 19GB >> foo.bar
+  - df -H
+  - df -i
+  - sleep 60m
   
