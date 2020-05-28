@@ -1,24 +1,19 @@
 language: c
 dist: xenial
 arch: ppc64le
-cache: ccache
-services:
-  - docker
-#addon:
-#  apt:
-#    - quota
-env:
-  global:
-    - ARCH=powerpc
-    - IMAGE=ubuntu-19.10
-      
+jobs:
+  include:
+    - env: JOB=1
+    - env: JOB=2
+    - env: JOB=3
+    - env: JOB=4
+    - env: JOB=5
+    - env: JOB=6
+    - env: JOB=7
+    - env: JOB=8
 script:
+  - travis_wait 60 sleep 60m &
   - arch
   - df -H
-  - cat /etc/fstab
   - df -i
-  - cat /proc/sys/fs/file-max
-  - cat /proc/sys/fs/file-nr
   
-install:
-  - #docker pull linuxppc/build:$IMAGE-$(uname -m)
